@@ -31,13 +31,34 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'name',
-            'description:ntext',
-            'image',
+            [
+                    'label' => 'Game Image',
+                    'content' => function($model)
+                                {
+                                    /**
+                                     * @var \common\models\Product $model
+                                     */
+                                    return Html::img($model->getImageUrl(), ['style' => 'width: 60px']);
+                                }
+            ],
             'price',
-            //'status',
-            //'created_at',
-            //'updated_at',
-            //'created_by',
+            [
+                    'attribute' => 'status',
+                    'content' => function($model)
+                                {
+                                    /**
+                                     * @var \common\models\Product $model
+                                     */
+                                    return Html::tag('span', $model->status ? 'Active': 'Inactive',
+                                    [
+                                        'class' => $model->status ? 'badge badge-success' : 'badge badge-danger'
+                                    ]);
+                                }
+
+            ],
+            'created_at:datetime',
+            'updated_at:datetime',
+            'created_by',
             //'updated_by',
             [
                 'class' => ActionColumn::className(),
