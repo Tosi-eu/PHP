@@ -28,10 +28,7 @@ AppAsset::register($this);
 
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-            <div class="sidebar-brand-icon rotate-n-15">
-                <i class="fas fa-laugh-wink"></i>
-            </div>
-            <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+            <div class="sidebar-brand-text mx-3">Games Store</div>
         </a>
 
         <!-- Divider -->
@@ -41,7 +38,7 @@ AppAsset::register($this);
         <li class="nav-item active">
             <a class="nav-link" href="index.html">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
-                <span>Dashboard</span></a>
+                <span>Home Page</span></a>
         </li>
 
         <!-- Divider -->
@@ -49,21 +46,21 @@ AppAsset::register($this);
 
         <!-- Heading -->
         <div class="sidebar-heading">
-            Addons
+            Products
         </div>
 
         <!-- Nav Item - Charts -->
         <li class="nav-item">
             <a class="nav-link" href="<?php echo \yii\helpers\Url::to(['/product/index'])?>">
                 <i class="fas fa-fw fa-chart-area"></i>
-                <span>Charts</span></a>
+                <span>Register Your Game</span></a>
         </li>
 
         <!-- Nav Item - Tables -->
         <li class="nav-item">
             <a class="nav-link" href="tables.html">
                 <i class="fas fa-fw fa-table"></i>
-                <span>Tables</span></a>
+                <span>View Catalogue</span></a>
         </li>
 
         <!-- Divider -->
@@ -77,8 +74,8 @@ AppAsset::register($this);
         <!-- Sidebar Message -->
         <div class="sidebar-card d-none d-lg-flex">
             <img class="sidebar-card-illustration mb-2" src="/img/undraw_rocket.svg" alt="...">
-            <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
-            <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
+            <p class="text-center mb-2"><strong>Gamer Pro</strong> grantee free games and <b>AMAZING</b> discounts every month!</p>
+            <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Become a gamer!</a>
         </div>
 
     </ul>

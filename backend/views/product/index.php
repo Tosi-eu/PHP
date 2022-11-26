@@ -29,7 +29,10 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
+            [
+                'attribute' => 'id',
+                'contentOptions' => ['style' => 'width: 60px']
+            ],
             'name',
             [
                     'label' => 'Game Image',
@@ -41,8 +44,9 @@ $this->params['breadcrumbs'][] = $this->title;
                                     return Html::img($model->getImageUrl(), ['style' => 'width: 60px']);
                                 }
             ],
-            'price',
+            'price:currency',
             [
+                    'label' => 'Product Status',
                     'attribute' => 'status',
                     'content' => function($model)
                                 {
@@ -56,8 +60,18 @@ $this->params['breadcrumbs'][] = $this->title;
                                 }
 
             ],
-            'created_at:datetime',
-            'updated_at:datetime',
+            [
+                    'attribute' => 'created_at',
+                    'format' => ['datetime'],
+                    'contentOptions' => ['style' => 'white-space: nowrap']
+            ],
+
+            [
+                'attribute' => 'updated_at',
+                'format' => ['datetime'],
+                'contentOptions' => ['style' => 'white-space: nowrap']
+            ],
+
             'created_by',
             //'updated_by',
             [
