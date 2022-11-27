@@ -2,6 +2,9 @@
 
 namespace common\models\query;
 
+use common\models\Product;
+use yii\helpers\StringHelper;
+
 /**
  * This is the ActiveQuery class for [[\common\models\Product]].
  *
@@ -31,4 +34,13 @@ class ProductQuery extends \yii\db\ActiveQuery
     {
         return parent::one($db);
     }
+
+    /**
+     * @return ProductQuery
+     */
+    public function publishedItems(): ProductQuery
+    {
+        return $this->andWhere(['status' => 1]);
+    }
+
 }

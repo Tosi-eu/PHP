@@ -71,8 +71,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'format' => ['datetime'],
                 'contentOptions' => ['style' => 'white-space: nowrap']
             ],
-
-            'created_by',
+            //'created_by',
             //'updated_by',
             [
                 'class' => ActionColumn::className(),
